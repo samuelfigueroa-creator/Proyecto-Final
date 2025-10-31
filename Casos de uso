@@ -1,0 +1,200 @@
+UC01 - Encendido automático de la bomba
+Goal in Context El sistema enciende la bomba cuando el
+
+tanque está en nivel bajo.
+
+Scope &amp; Level Sistema de llenado automático de tanque,
+
+Primary task
+
+Preconditions El tanque cuenta con agua y los sensores
+están instalados y en funcionamiento.
+Success End Condition La bomba se activa automáticamente y
+
+empieza a llenar el tanque.
+
+Failed End Condition El tanque queda vacío y la bomba no se
+
+activa.
+
+Primary Actor Usuario / Sistema
+Trigger El sensor de nivel bajo detecta agua
+
+mínima.
+
+Main Success Scenario 1. Sensor detecta nivel bajo.
+2. Sistema recibe señal.
+3. Sistema enciende la bomba.
+4. La bomba empieza a llenar el tanque.
+Extensions 1a Sensor falla: El sistema envía una alerta
+
+de error al usuario.
+
+Priority Alta
+Frequency Cada vez que el tanque se vacía
+
+UC02 - Apagado automático de la bomba
+Goal in Context El sistema apaga la bomba cuando el
+tanque alcanza el nivel máximo.
+Scope &amp; Level Sistema de llenado automático de tanque,
+
+Primary task
+
+Preconditions La bomba está encendida llenando el
+
+tanque.
+
+Success End Condition La bomba se apaga automáticamente sin
+
+desbordar el agua.
+
+Failed End Condition El agua se desborda porque la bomba no se
+
+apaga.
+
+Primary Actor Usuario / Sistema
+Trigger El sensor de nivel alto detecta nivel
+
+máximo.
+
+Main Success Scenario 1. Sensor detecta nivel máximo.
+2. Sistema recibe señal.
+3. Sistema apaga la bomba.
+4. El tanque queda lleno sin desbordar.
+Extensions 1a Sensor falla: El sistema envía alerta de
+
+error al usuario.
+
+Priority Alta
+Frequency Cada vez que el tanque se llena
+
+UC03 - Generación de alerta por tanque vacío
+Goal in Context El sistema notifica cuando el tanque llega al
+
+nivel bajo.
+
+Scope &amp; Level Sistema de llenado automático de tanque,
+
+Primary task
+
+Preconditions Los sensores y el sistema de alerta están
+
+activos.
+
+Success End Condition El usuario recibe la alerta de nivel bajo.
+Failed End Condition El usuario no recibe ninguna notificación.
+Primary Actor Usuario
+Trigger El sensor de nivel bajo detecta agua
+
+mínima.
+
+Main Success Scenario 1. Sensor detecta nivel bajo.
+
+2. Sistema activa alerta (visual/sonora).
+3. El usuario percibe la alerta.
+
+Extensions 1a Fallo en el sistema de notificación: El
+sistema genera alerta secundaria.
+
+Priority Media
+Frequency Cada vez que el tanque llega a nivel bajo
+
+UC04 - Generación de alerta por tanque lleno
+Goal in Context El sistema notifica cuando el tanque está
+
+lleno.
+
+Scope &amp; Level Sistema de llenado automático de tanque,
+
+Primary task
+
+Preconditions Los sensores y el sistema de alerta están
+
+activos.
+
+Success End Condition El usuario recibe la alerta de nivel máximo.
+Failed End Condition El usuario no recibe la notificación.
+Primary Actor Usuario
+Trigger El sensor de nivel alto detecta nivel
+
+máximo.
+
+Main Success Scenario 1. Sensor detecta nivel máximo.
+2. Sistema activa alerta (visual/sonora).
+3. El usuario percibe la alerta.
+
+Extensions 1a Fallo en el sistema de notificación: El
+sistema genera alerta secundaria.
+
+Priority Media
+Frequency Cada vez que el tanque llega a nivel
+
+máximo
+
+UC05 - Monitoreo del estado del tanque
+Goal in Context El usuario consulta el estado actual del
+
+tanque.
+
+Scope &amp; Level Sistema de llenado automático de tanque,
+
+Primary task
+
+Preconditions El sistema está en funcionamiento y
+conectado a la interfaz de usuario.
+
+Success End Condition El usuario visualiza el estado correcto del
+
+tanque.
+
+Failed End Condition El sistema no muestra el estado o muestra
+
+información errónea.
+
+Primary Actor Usuario
+Trigger El usuario consulta la interfaz de
+
+monitoreo.
+
+Main Success Scenario 1. Usuario accede a la interfaz.
+2. Sistema consulta datos de sensores.
+3. Sistema muestra estado (vacío,
+llenándose, lleno).
+
+Extensions 1a Falla en comunicación: Sistema muestra
+
+alerta de error.
+Priority Media
+Frequency Cada vez que el usuario lo necesite
+
+UC06 - Registro de historial de eventos
+Goal in Context El sistema almacena fecha y hora de
+encendido/apagado de la bomba.
+Scope &amp; Level Sistema de llenado automático de tanque,
+
+Primary task
+
+Preconditions El sistema está en operación normal.
+Success End Condition El historial queda registrado y puede
+
+consultarse.
+
+Failed End Condition No se registran los eventos o se pierden
+
+datos.
+
+Primary Actor Usuario / Sistema
+Trigger El sistema enciende o apaga la bomba.
+Main Success Scenario 1. Sistema detecta evento
+(encendido/apagado).
+2. Sistema guarda fecha y hora en registro.
+3. Usuario puede consultar historial.
+
+Extensions 1a Falla en almacenamiento: El sistema
+
+envía alerta al usuario.
+
+Priority Baja
+Frequency Cada evento de encendido/apagado de la
+
+bomba
