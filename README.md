@@ -1,19 +1,19 @@
 # Proyecto-Final
 Diagrama de clases : https://github.com/samuelfigueroa-creator/Proyecto-Final/blob/main/DiagramaClases%20(2).pdf
-💧 Sistema de Control Automático de Llenado de Tanque de 3 Niveles
+--> Sistema de Control Automático de Llenado de Tanque de 3 Niveles
 ¡Bienvenidos al proyecto Sistema de Control Automático de Llenado de Tanque de 3 Niveles!
 Este sistema permite automatizar el llenado de un tanque de agua mediante sensores de nivel y control inteligente a través de una interfaz web conectada a Adafruit IO, integrando el uso del microcontrolador ESP32.
 Nuestro objetivo es crear una solución eficiente, confiable y práctica para el control de sistemas de bombeo y almacenamiento de agua, combinando hardware, software e Internet de las Cosas (IoT).
 
-🧠 Descripción del Proyecto
+- Descripción del Proyecto
 El sistema está diseñado para controlar de forma automática y manual el llenado de un tanque, utilizando tres sensores de nivel (bajo, medio y alto) que detectan la cantidad de agua disponible.
 Cuando el nivel baja del punto mínimo, la bomba se activa automáticamente hasta alcanzar el nivel máximo, momento en el cual se detiene para evitar desbordamientos.
 Además, el usuario puede monitorear el estado del tanque y activar/desactivar la bomba manualmente desde una interfaz en Adafruit IO, que permite enviar y recibir datos en tiempo real a través del protocolo MQTT.
 
-🎯 Objetivo General
+-> Objetivo General
 Desarrollar un sistema automatizado de control de llenado de tanque basado en ESP32 con conectividad IoT (Adafruit IO), que opere en modo manual o automático para optimizar el uso de agua y energía.
 
-🎯 Objetivos Específicos
+-> Objetivos Específicos
 
 
 Diseñar el hardware del sistema de control de llenado.
