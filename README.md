@@ -177,5 +177,3 @@ Diseñar el dashboard IoT y realizar pruebas integradas.
 🔌 Código Fuente: /Aplicacion/
 🧾 Historias de Usuario: /Documentos/Analisis/HistoriasDeUsuario.pdf
 
-¿Quieres que te lo deje en formato Markdown (.md) para subirlo a tu repositorio de GitHub (con los emojis y tablas ya alineados)?
-Puedo generarlo listo para copiar y pegar en tu carpeta /Documentos/README.md.
