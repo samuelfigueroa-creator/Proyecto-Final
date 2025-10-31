@@ -36,7 +36,7 @@ Documentar el desarrollo con diagramas, historias de usuario y casos de uso.
 
 
 👥 Integrantes del Equipo
-NombreRolResponsabilidadSamuel FigueroaLíder del Proyecto / Programador IoTCoordinación general, desarrollo del código y pruebas de integración.Sara Lucía AriasDiseñadora / Encargada de PruebasDiseño de diagramas, documentación visual y validación de funcionamiento.Leiner RodríguezEnsamblador / Pruebas de HardwareMontaje físico del sistema, verificación de sensores y actuadores.Sebastián HerreraDocumentación / Soporte TécnicoElaboración de documentos técnicos y registro de resultados.
+Nombre/Rol/Responsabilidad: Samuel FigueroaLíder del Proyecto / Programador IoTCoordinación general, desarrollo del código y pruebas de integración.Sara Lucía AriasDiseñadora / Encargada de PruebasDiseño de diagramas, documentación visual y validación de funcionamiento.Leiner RodríguezEnsamblador / Pruebas de HardwareMontaje físico del sistema, verificación de sensores y actuadores.Sebastián HerreraDocumentación / Soporte TécnicoElaboración de documentos técnicos y registro de resultados.
 
 🕐 Planificación y Reuniones
 🗓️ Inicio del proyecto: 10 de septiembre de 2025
