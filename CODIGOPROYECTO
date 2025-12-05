@@ -1,0 +1,52 @@
+// Pines del sensor HC-SR04
+const int trigPin = 9;
+const int echoPin = 10;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  
+  Serial.println("=== Prueba de Sensor Ultrasónico ===");
+  Serial.println("Mueve tu mano para ver la distancia");
+  Serial.println();
+}
+
+void loop() {
+  // Limpiar el trigger
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  
+  // Enviar pulso de 10 microsegundos
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  
+  // Leer el eco
+  long duracion = pulseIn(echoPin, HIGH);
+  
+  // Calcular distancia en cm
+  float distancia = duracion * 0.034 / 2;
+  
+  // Mostrar distancia
+  Serial.print("Distancia: ");
+  Serial.print(distancia);
+  Serial.println(" cm");
+  
+  // Indicadores visuales
+  if (distancia < 5) {
+    Serial.println("👋 ¡Tanque casi lleno");
+  } else if (distancia < 10) {
+    Serial.println("✋ Llenando el tanque");
+  } else if (distancia < 20) {
+    Serial.println("🤚 Tanque con poca agua");
+  } else if (distancia < 40) {
+    Serial.println("🖐 Lejos");
+  } else {
+    Serial.println("❌ Muy lejos o sin detección");
+  }
+  
+  Serial.println("------------------------");
+  
+  delay(500);
+}
